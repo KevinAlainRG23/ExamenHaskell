@@ -6,8 +6,11 @@ funcionDia = do
             putStrLn("INSERTE EL DIA") 
             b <- getLine  
             let bInt= read b::Int
-            if (bInt>=1 || bInt<=31)
+            if (bInt==0 || bInt>32)
                 then do
+                putStrLn("estos dias no existen") 
+            else if bInt>=1 || bInt<=31
+                then 
                 putStrLn("naciste el dia: "++show bInt) 
             else if bInt>=1 || bInt<=30
                 then 
