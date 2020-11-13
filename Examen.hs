@@ -9,6 +9,7 @@ funcionDia = do
             if (bInt==0 || bInt>32)
                 then do
                 putStrLn("estos dias no existen") 
+                funcionDia
             else if bInt>=1 || bInt<=31
                 then 
                 putStrLn("naciste el dia: "++show bInt) 
@@ -68,4 +69,6 @@ funcionMes = do
                 then 
                 putStrLn("Estes mes no existe") 
             else
-                putStrLn("salir") 
+                putStrLn("salir")
+            
+            funcionDia
